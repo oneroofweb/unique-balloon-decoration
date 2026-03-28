@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta name="robots" content="noindex" />
+    <title>Event Vendors Planners Decorators & Venues | Events Bucket</title>
+    <meta
+      name="description"
+      content="Search and compare event planners, wedding decorators, banquet halls, artists and event service providers. Events Bucket connects you with the best event professionals near you."
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+
+     <!-- ================== Navbar Start Here ================= -->
+    <nav
+      class="navbar navbar-expand-lg bg-white sticky-top py-2 shadow-sm"
+      style="z-index: 1040"
+    >
+      <div class="container-fluid container-lg">
+        <a
+          class="navbar-brand fw-bold d-flex align-items-center gap-2 me-4"
+          href="index.html"
+          style="font-size: 1.5rem; color: #25A25A !important"
+        >
+          <img
+            src="/images/unique_baloon_logo.png"
+            class="img-fluid"
+            width="130"
+            height=""
+            alt=""
+          />
+        </a>
+        <button
+          class="navbar-toggler border-0 shadow-none"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#mobileMenu"
+        >
+          <span class="fa-solid fa-bars-staggered fa-lg text-dark"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse d-none d-lg-flex justify-content-between align-items-center w-100"
+        >
+
+<div
+  class="mx-auto d-flex align-items-center bg-white rounded-pill px-2 py-1 desktop-search-bar"
+  style="width: 100%; max-width: 550px"
+>
+  <div class="border-end pe-2" style="width: 30%;">
+    <a
+      href="choose-city.html"
+      class="btn btn-sm border-0 fw-semibold text-dark d-flex align-items-center justify-content-between w-100 text-decoration-none"
+    >
+      <div class="d-flex align-items-center gap-2 overflow-hidden w-100">
+        <i class="fa-solid fa-location-dot text-danger flex-shrink-0"></i>
+        <span id="desktopNavCity" class="text-truncate text-start w-100">Select City</span>
+      </div>
+      <i class="fa-solid fa-chevron-down small text-muted opacity-50 flex-shrink-0 ms-1"></i>
+    </a>
+  </div>
+
+  <div class="input-group border-0 ps-2" style="width: 70%;">
+    <input
+      type="text"
+      class="form-control border-0 bg-transparent shadow-none px-2"
+      placeholder="Search decorators, venues..."
+    />
+    <button
+      class="btn btn-success rounded-circle d-flex align-items-center justify-content-center p-2 flex-shrink-0"
+      style="width: 35px; height: 35px; background-color: #25A25A"
+    >
+      <i class="fa-solid fa-magnifying-glass text-white small"></i>
+    </button>
+  </div>
+</div>
+
+
+          <div class="d-flex align-items-center gap-3 ms-4">
+            <a
+              href="add-business.html"
+              class="nav-link fw-semibold text-dark text-nowrap"
+              ><i class="fa-solid fa-plus-circle text-danger"></i> Add
+              Business</a
+            >
+            <div class="vr text-secondary opacity-25"></div>
+            <a
+              href="login.html"
+              class="btn btn-outline-danger btn-sm px-4 py-2 rounded-pill fw-semibold text-nowrap btn-hover-bg"
+              style="border-color: #25A25A; color: #25A25A"
+              >Login</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+<div class="d-lg-none position-fixed start-0 end-0 bg-white border-bottom shadow-sm px-3 py-2" style="z-index: 1030">
+  <div class="d-flex gap-2 align-items-center w-100">
+    
+    <div class="border-end pe-2 flex-shrink-0" style="width: 35%;">
+      <a href="choosecity.html" class="btn btn-sm border-0 fw-semibold text-dark d-flex align-items-center justify-content-between w-100 text-decoration-none px-1">
+        <div class="d-flex align-items-center gap-1 overflow-hidden w-100">
+          <i class="fa-solid fa-location-dot text-danger flex-shrink-0"></i>
+          <span id="mobileSelectedCity" class="text-truncate text-start w-100" style="font-size: 0.85rem;">Select City</span>
+        </div>
+        <i class="fa-solid fa-chevron-down small text-muted opacity-50 flex-shrink-0 ms-1" style="font-size: 0.7rem;"></i>
+      </a>
+    </div>
+
+    <div class="flex-grow-1" style="width: 65%;">
+      <div class="input-group">
+        <span class="input-group-text bg-light border-end-0 rounded-start-pill ps-2 pe-1 text-secondary">
+          <i class="fa-solid fa-magnifying-glass small"></i>
+        </span>
+        <input type="text" class="form-control bg-light border-start-0 rounded-end-pill shadow-none px-2" placeholder="Search..." style="font-size: 0.85rem;" />
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+    <!-- ============== Offcanvas Start Here ============= -->
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="mobileMenu"
+      style="z-index: 1050"
+    >
+      <div class="offcanvas-header border-bottom">
+        <h5 class="offcanvas-title fw-bold" style="color: #25A25A">
+          Unique Balloons Decoration
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+        ></button>
+      </div>
+      <div class="offcanvas-body d-flex flex-column">
+        <ul class="navbar-nav fs-5 gap-3 mt-3">
+          <li class="nav-item">
+            <a class="nav-link text-dark border-bottom pb-2" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark border-bottom pb-2" href="#"
+              >Services</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ================== Navbar END Here ================= -->
+
+    <section class="py-5 bg-light">
+      <div class="container py-4">
+        <div class="text-center mb-5">
+          <h1 class="fw-bold display-6 mb-3">Unique Balloons Decoration in India</h1>
+          <div class="theme-divider mx-auto mb-3"></div>
+        </div>
+        <div class="row g-4">
+          <div class="col-6 col-md-4 col-lg-3">
+            <a href="/balloons-decoration-listing.html" class="text-decoration-none">
+              <div class="card shadow-sm category-card h-100">
+                <div class="card-img-wrapper img-zoom-container">
+                  <img
+                    src="images/category/Birthday Balloon Decoration.jpg"
+                    class="card-img-top"
+                    alt="Planners & Decorators"
+                  />
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title fw-bold mb-0 text-dark">
+                    Birthday Balloon Decoration
+                  </h5>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <a href="/balloons-decoration-listing.html" class="text-decoration-none">
+              <div class="card shadow-sm category-card h-100">
+                <div class="card-img-wrapper img-zoom-container">
+                  <img
+                    src="images/category/Anniversary Balloon Decoration.jpg"
+                    class="card-img-top"
+                    alt="Party Venues"
+                  />
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title fw-bold mb-0 text-dark">
+                    Anniversary Balloon Decoration
+                  </h5>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <a href="/balloons-decoration-listing.html" class="text-decoration-none">
+              <div class="card shadow-sm category-card h-100">
+                <div class="card-img-wrapper img-zoom-container">
+                  <img
+                    src="images/category/Baby Shower Decoration.jpg"
+                    class="card-img-top"
+                    alt="Event Artists"
+                  />
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title fw-bold mb-0 text-dark">
+                    Baby Shower Decoration
+                  </h5>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <a href="/balloons-decoration-listing.html" class="text-decoration-none">
+              <div class="card shadow-sm category-card h-100">
+                <div class="card-img-wrapper img-zoom-container">
+                  <img
+                    src="images/category/Welcome Baby Decoration.jpg"
+                    class="card-img-top"
+                    alt="Makeovers"
+                  />
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title fw-bold mb-0 text-dark">Welcome Baby Decoration</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <a href="/balloons-decoration-listing.html" class="text-decoration-none">
+              <div class="card shadow-sm category-card h-100">
+                <div class="card-img-wrapper img-zoom-container">
+                  <img
+                    src="images/category/Romantic Room Decoration.jpg"
+                    class="card-img-top"
+                    alt="Photography"
+                  />
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title fw-bold mb-0 text-dark">Romantic Room Decoration</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <a href="/balloons-decoration-listing.html" class="text-decoration-none">
+              <div class="card shadow-sm category-card h-100">
+                <div class="card-img-wrapper img-zoom-container">
+                  <img
+                    src="images/category/Party Balloon Decoration.jpg"
+                    class="card-img-top"
+                    alt="Catering Services"
+                  />
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title fw-bold mb-0 text-dark">
+                    Party Balloon Decoration
+                  </h5>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <a href="/balloons-decoration-listing.html" class="text-decoration-none">
+              <div class="card shadow-sm category-card h-100">
+                <div class="card-img-wrapper img-zoom-container">
+                  <img
+                    src="images/category/Corporate Event Decoration.jpg"
+                    class="card-img-top"
+                    alt="Music & DJ"
+                  />
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title fw-bold mb-0 text-dark">Corporate Event Decoration</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <a href="/balloons-decoration-listing.html" class="text-decoration-none">
+              <div class="card shadow-sm category-card h-100">
+                <div class="card-img-wrapper img-zoom-container">
+                  <img
+                    src="images/category/Wedding Balloon Decoration.jpg"
+                    class="card-img-top"
+                    alt="Invites"
+                  />
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title fw-bold mb-0 text-dark">Wedding Balloon Decoration</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============= Blog Section ============ -->
+     <section class="py-5 bg-white">
+      <div class="container py-4">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold display-6 mb-3">Latest Event Ideas & Tips</h2>
+          <div class="theme-divider mx-auto mb-3"></div>
+          <p class="text-muted">Discover inspiration, planning guides, and expert advice for your next big event.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="card shadow-sm blog-card h-100 border-0 overflow-hidden" style="border-radius: 15px;">
+              <div class="blog-img-wrapper position-relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80" class="card-img-top w-100" alt="Wedding Trends" style="height: 240px; object-fit: cover;">
+                <span class="badge position-absolute top-0 end-0 m-3 px-3 py-2 rounded-pill shadow-sm" style="background-color: #25A25A;">Weddings</span>
+              </div>
+              <div class="card-body p-4 d-flex flex-column bg-light">
+                <div class="d-flex justify-content-between align-items-center mb-3 small text-muted">
+                  <span><i class="fa-regular fa-calendar me-2 text-danger"></i>Oct 24, 2023</span>
+                  <span><i class="fa-regular fa-user me-2 text-danger"></i>By Admin</span>
+                </div>
+                <h5 class="card-title fw-bold mb-3">
+                  <a href="#" class="text-dark text-decoration-none text-hover-primary">Top 10 Wedding Decoration Trends for the Upcoming Season</a>
+                </h5>
+                <p class="card-text text-muted mb-4 flex-grow-1" style="font-size: 0.95rem;">Explore the most captivating wedding decor trends taking the industry by storm, from minimalist elegance to bold floral installations.</p>
+                <a href="#" class="mt-auto fw-semibold text-decoration-none d-flex align-items-center gap-2 read-more-link" style="color: #25A25A;">
+                  Read Article <i class="fa-solid fa-arrow-right transition-icon"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card shadow-sm blog-card h-100 border-0 overflow-hidden" style="border-radius: 15px;">
+              <div class="blog-img-wrapper position-relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80" class="card-img-top w-100" alt="Corporate Event Ideas" style="height: 240px; object-fit: cover;">
+                <span class="badge position-absolute top-0 end-0 m-3 px-3 py-2 rounded-pill shadow-sm" style="background-color: #25A25A;">Corporate</span>
+              </div>
+              <div class="card-body p-4 d-flex flex-column bg-light">
+                <div class="d-flex justify-content-between align-items-center mb-3 small text-muted">
+                  <span><i class="fa-regular fa-calendar me-2 text-danger"></i>Nov 05, 2023</span>
+                  <span><i class="fa-regular fa-user me-2 text-danger"></i>By Admin</span>
+                </div>
+                <h5 class="card-title fw-bold mb-3">
+                  <a href="#" class="text-dark text-decoration-none text-hover-primary">How to Plan a Corporate Event That Doesn't Bore</a>
+                </h5>
+                <p class="card-text text-muted mb-4 flex-grow-1" style="font-size: 0.95rem;">Say goodbye to dull seminars. Learn engaging strategies to keep your team motivated, entertained, and networking.</p>
+                <a href="#" class="mt-auto fw-semibold text-decoration-none d-flex align-items-center gap-2 read-more-link" style="color: #25A25A;">
+                  Read Article <i class="fa-solid fa-arrow-right transition-icon"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card shadow-sm blog-card h-100 border-0 overflow-hidden" style="border-radius: 15px;">
+              <div class="blog-img-wrapper position-relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80" class="card-img-top w-100" alt="Birthday Party Tips" style="height: 240px; object-fit: cover;">
+                <span class="badge position-absolute top-0 end-0 m-3 px-3 py-2 rounded-pill shadow-sm" style="background-color: #25A25A;">Birthdays</span>
+              </div>
+              <div class="card-body p-4 d-flex flex-column bg-light">
+                <div class="d-flex justify-content-between align-items-center mb-3 small text-muted">
+                  <span><i class="fa-regular fa-calendar me-2 text-danger"></i>Nov 12, 2023</span>
+                  <span><i class="fa-regular fa-user me-2 text-danger"></i>By Admin</span>
+                </div>
+                <h5 class="card-title fw-bold mb-3">
+                  <a href="#" class="text-dark text-decoration-none text-hover-primary">5 Magical Kids Birthday Party Themes</a>
+                </h5>
+                <p class="card-text text-muted mb-4 flex-grow-1" style="font-size: 0.95rem;">Create unforgettable memories for your little ones with these creative, interactive, and visually stunning party themes.</p>
+                <a href="#" class="mt-auto fw-semibold text-decoration-none d-flex align-items-center gap-2 read-more-link" style="color: #25A25A;">
+                  Read Article <i class="fa-solid fa-arrow-right transition-icon"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="#" class="btn btn-outline-success btn-lg px-5 py-2 rounded-pill fw-semibold btn-hover-bg" style="font-size: 16px;">View All Articles</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============== NAP Section ============= -->
+     <section class="py-5 bg-light">
+      <div class="container py-4">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold display-6 mb-3">Get in Touch</h2>
+          <div class="theme-divider mx-auto mb-3"></div>
+          <p class="text-muted">We're here to help make your next event extraordinary. Reach out to us today!</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-6 col-lg-4">
+            <div class="card shadow-sm h-100 border-0 text-center contact-card p-4" style="border-radius: 15px;">
+              <div class="icon-box mx-auto mb-4 d-flex align-items-center justify-content-center rounded-circle" style="width: 75px; height: 75px; background-color: rgba(37, 162, 90, 0.1);">
+                <i class="fa-solid fa-location-dot fs-3" style="color: #25A25A;"></i>
+              </div>
+              <h5 class="fw-bold mb-3">Our Office</h5>
+              <p class="text-muted mb-0" style="font-size: 0.95rem;">
+                <strong>Unique Balloons Decoration HQ</strong><br>
+                123 Celebration Avenue,<br>
+                Party District, City 400001
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card shadow-sm h-100 border-0 text-center contact-card p-4" style="border-radius: 15px;">
+              <div class="icon-box mx-auto mb-4 d-flex align-items-center justify-content-center rounded-circle" style="width: 75px; height: 75px; background-color: rgba(37, 162, 90, 0.1);">
+                <i class="fa-solid fa-phone-volume fs-3" style="color: #25A25A;"></i>
+              </div>
+              <h5 class="fw-bold mb-3">Contact Details</h5>
+              <div class="d-flex flex-column gap-2" style="font-size: 0.95rem;">
+                <a href="tel:+919876543210" class="text-decoration-none text-muted contact-link">
+                  <i class="fa-solid fa-phone me-2 opacity-50"></i> +91 98765 43210
+                </a>
+                <a href="mailto:hello@eventbucket.in" class="text-decoration-none text-muted contact-link">
+                  <i class="fa-solid fa-envelope me-2 opacity-50"></i> hello@eventbucket.in
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card shadow-sm h-100 border-0 text-center contact-card p-4" style="border-radius: 15px;">
+              <div class="icon-box mx-auto mb-4 d-flex align-items-center justify-content-center rounded-circle" style="width: 75px; height: 75px; background-color: rgba(37, 162, 90, 0.1);">
+                <i class="fa-regular fa-clock fs-3" style="color: #25A25A;"></i>
+              </div>
+              <h5 class="fw-bold mb-3">Business Hours</h5>
+              <div class="text-muted" style="font-size: 0.95rem;">
+                <p class="mb-1">Mon - Sat: 10:00 AM - 7:00 PM</p>
+                <p class="mb-0 text-danger fw-medium" style="color: #25A25A !important;">Sunday: Closed</p>
+                <small class="opacity-75 d-block mt-2">(Available 24/7 for scheduled events)</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="pt-5 pb-3">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <a
+              class="navbar-brand fw-bold fs-3 text-white d-block mb-3"
+              href="#"
+            >
+            <img src="/images/unique_baloon_logo.png" alt="" height="40" style="border-radius: 12px;">
+            </a>
+            <p class="small">
+              We are a team of passionate event planners dedicated to creating
+              unique and memorable experiences for every client.
+            </p>
+            <div class="mt-4">
+              <a href="#" class="social-icon"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-icon"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+              <a href="#" class="social-icon"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="#" class="social-icon"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled d-flex flex-column gap-2">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Our Services</a></li>
+              <li><a href="#">Categories</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <h5>Categories</h5>
+            <ul class="list-unstyled d-flex flex-column gap-2">
+              <li><a href="#">Weddings</a></li>
+              <li><a href="#">Corporate</a></li>
+              <li><a href="#">Birthdays</a></li>
+              <li><a href="#">Decorations</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <h5>Newsletter</h5>
+            <p class="small">Subscribe to get the latest updates and offers.</p>
+            <form class="input-group mt-3">
+              <input
+                type="email"
+                class="form-control"
+                placeholder="Enter your email"
+              />
+              <button
+                class="btn btn-danger"
+                type="button"
+                style="background-color: #25A25A; border: none"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+        <hr class="my-4 border-secondary" />
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center text-md-start">
+            <p class="mb-0 small">
+              &copy; 2026 Unique Balloons Decoration. All rights reserved.
+            </p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <a href="#" class="small text-decoration-none text-muted me-3"
+              >Privacy Policy</a
+            >
+            <a href="#" class="small text-decoration-none text-muted"
+              >Terms of Service</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/script.js"></script>
+  </body>
+</html>
