@@ -198,24 +198,9 @@
 
     <section class="py-4 bg-light mt-5 mt-lg-0">
       <div class="container-fluid container-lg">
-        <nav aria-label="breadcrumb" class="mb-2">
-          <ol class="breadcrumb small text-muted">
-            <li class="breadcrumb-item">
-              <a href="index.html" class="text-decoration-none text-muted"
-                >Home</a
-              >
-            </li>
-            <li class="breadcrumb-item">
-              <a href="#" class="text-decoration-none text-muted">Lucknow</a>
-            </li>
-            <li class="breadcrumb-item active text-danger fw-medium">
-              Decorators
-            </li>
-          </ol>
-        </nav>
-        <h2 class="fw-bold mb-3 text-dark">
-          Popular <span class="text-danger">Balloon Decorators</span> in Lucknow
-        </h2>
+        <h1 class="fw-bold mb-3 text-dark fs-3 pt-2">
+          Best <span class="text-danger">Balloon Decorators</span> in Lucknow
+        </h1>
 
         <div
           class="sticky-filter-bar sticky-top bg-light py-2 mb-4"
@@ -235,6 +220,7 @@
                 data-bs-toggle="dropdown"
                 data-bs-auto-close="outside"
                 id="btnLocality"
+                
               >
                 Locality
               </button>
@@ -324,122 +310,6 @@
               </div>
             </div>
 
-            <div class="dropdown">
-              <button
-                class="btn filter-pill dropdown-toggle"
-                type="button"
-                data-bs-toggle="dropdown"
-                data-bs-auto-close="outside"
-                id="btnCategory"
-              >
-                Category
-              </button>
-              <div
-                class="dropdown-menu p-2 shadow border-0 custom-dropdown-menu"
-              >
-                <div class="input-group mb-2 border rounded-1 bg-light">
-                  <input
-                    type="text"
-                    class="form-control border-0 shadow-none bg-transparent ps-2 dropdown-search"
-                    placeholder="Search..."
-                  />
-                </div>
-                <div class="list-options custom-scrollbar">
-                  <a
-                    class="option-link"
-                    href="#"
-                    onclick="selectFilter(this, 'btnCategory')"
-                    >Wedding</a
-                  >
-                  <a
-                    class="option-link"
-                    href="#"
-                    onclick="selectFilter(this, 'btnCategory')"
-                    >Birthday Party</a
-                  >
-                  <a
-                    class="option-link"
-                    href="#"
-                    onclick="selectFilter(this, 'btnCategory')"
-                    >Corporate</a
-                  >
-                </div>
-              </div>
-            </div>
-
-            <div class="dropdown">
-              <button
-                class="btn filter-pill dropdown-toggle"
-                type="button"
-                data-bs-toggle="dropdown"
-                data-bs-auto-close="outside"
-                id="btnSubCat"
-              >
-                Sub-Category
-              </button>
-              <div
-                class="dropdown-menu p-2 shadow border-0 custom-dropdown-menu"
-              >
-                <div class="list-options custom-scrollbar">
-                  <a
-                    class="option-link"
-                    href="#"
-                    onclick="selectFilter(this, 'btnSubCat')"
-                    >Balloon Decor</a
-                  >
-                  <a
-                    class="option-link"
-                    href="#"
-                    onclick="selectFilter(this, 'btnSubCat')"
-                    >Flower Decor</a
-                  >
-                  <a
-                    class="option-link"
-                    href="#"
-                    onclick="selectFilter(this, 'btnSubCat')"
-                    >Catering</a
-                  >
-                </div>
-              </div>
-            </div>
-
-            <div class="dropdown">
-              <button
-                class="btn filter-pill dropdown-toggle"
-                type="button"
-                data-bs-toggle="dropdown"
-                data-bs-auto-close="outside"
-                id="btnSort"
-              >
-                <i class="fa-solid fa-arrow-down-wide-short small me-1"></i>
-                Sort
-              </button>
-              <div
-                class="dropdown-menu p-2 shadow border-0 custom-dropdown-menu"
-              >
-                <div class="list-options">
-                  <a
-                    class="option-link active"
-                    href="#"
-                    onclick="selectFilter(this, 'btnSort')"
-                    >Recommended</a
-                  >
-                  <a
-                    class="option-link"
-                    href="#"
-                    onclick="selectFilter(this, 'btnSort')"
-                    >Top Rated</a
-                  >
-                  <a
-                    class="option-link"
-                    href="#"
-                    onclick="selectFilter(this, 'btnSort')"
-                    >Price: Low to High</a
-                  >
-                </div>
-              </div>
-            </div>
-
             <a
               href="#"
               class="text-danger fw-bold text-decoration-none ms-2 small text-nowrap"
@@ -449,6 +319,11 @@
           </div>
         </div>
 
+  <!-- 
+      ======================================================
+        Listing Card - Content
+      ======================================================
+   -->
         <div class="row">
 <div class="col-lg-8">
             
@@ -497,7 +372,7 @@
 
                   <div class="mt-auto d-flex gap-2 position-relative z-3">
                     <button class="btn btn-success fw-bold flex-grow-1">
-                      <i class="fa-solid fa-phone me-2"></i> Call Now
+                      <i class="fa-solid fa-phone me-2"></i> View Contact
                     </button>
                     <button class="btn btn-outline-success fw-bold flex-grow-1">
                       <i class="fa-brands fa-whatsapp me-2"></i> WhatsApp
@@ -507,6 +382,7 @@
               </div>
             </div>
 
+            
             <div class="card listing-card border-0 shadow-sm mb-4 overflow-hidden position-relative">
               <div class="row g-0">
                 <div class="col-md-4 position-relative">
@@ -540,7 +416,7 @@
                   </div>
                   <div class="mt-auto d-flex gap-2 position-relative z-3">
                     <button class="btn btn-success fw-bold flex-grow-1">
-                      <i class="fa-solid fa-phone me-2"></i> Call Now
+                      <i class="fa-solid fa-phone me-2"></i> View Contact
                     </button>
                     <button class="btn btn-outline-success fw-bold flex-grow-1">
                       <i class="fa-brands fa-whatsapp me-2"></i> WhatsApp
@@ -549,6 +425,7 @@
                 </div>
               </div>
             </div>
+
             <div class="card listing-card border-0 shadow-sm mb-4 overflow-hidden position-relative">
               <div class="row g-0">
                 <div class="col-md-4 position-relative">
@@ -582,7 +459,7 @@
                   </div>
                   <div class="mt-auto d-flex gap-2 position-relative z-3">
                     <button class="btn btn-success fw-bold flex-grow-1">
-                      <i class="fa-solid fa-phone me-2"></i> Call Now
+                      <i class="fa-solid fa-phone me-2"></i> View Contact
                     </button>
                     <button class="btn btn-outline-success fw-bold flex-grow-1">
                       <i class="fa-brands fa-whatsapp me-2"></i> WhatsApp
@@ -622,7 +499,7 @@
                   </div>
                   <div class="mt-auto d-flex gap-2 position-relative z-3">
                     <button class="btn btn-success fw-bold flex-grow-1">
-                      <i class="fa-solid fa-phone me-2"></i> Call Now
+                      <i class="fa-solid fa-phone me-"></i> View Contact
                     </button>
                     <button class="btn btn-outline-success fw-bold flex-grow-1">
                       <i class="fa-brands fa-whatsapp me-2"></i> WhatsApp
