@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     
-    <title>Add Business | Event Bucket</title>
+    <title>Add Business | Unique Balloons</title>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
@@ -21,7 +21,7 @@
       
       .form-control:focus, .form-select:focus {
         border-color: #25A25A;
-        box-shadow: 0 0 0 0.25rem rgba(230, 46, 46, 0.15);
+        box-shadow: 0 0 0 0.25rem rgba(37, 162, 90, 0.15); /* Matched to green theme */
       }
 
       .btn-theme {
@@ -33,14 +33,28 @@
         transition: all 0.3s;
       }
       .btn-theme:hover {
-        background-color: #c91e1e;
+        background-color: #1e8749; /* Darker green */
         color: white;
         transform: translateY(-2px);
-        box-shadow: 0 4px 10px rgba(230, 46, 46, 0.3);
+        box-shadow: 0 4px 10px rgba(37, 162, 90, 0.3);
       }
 
       .form-floating > label {
         color: #6c757d;
+      }
+
+      /* OTP Box Styling */
+      .otp-box {
+        width: 55px;
+        height: 55px;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 600;
+        border-radius: 10px;
+      }
+      .otp-box:focus {
+        border-color: #25A25A;
+        box-shadow: 0 0 0 0.25rem rgba(37, 162, 90, 0.15);
       }
     </style>
   </head>
@@ -48,18 +62,9 @@
 
     <nav class="navbar navbar-expand-lg bg-white sticky-top py-3 shadow-sm">
       <div class="container">
-        <a
-          class="navbar-brand fw-bold d-flex align-items-center gap-2 me-4"
-          href="index.html"
-          style="font-size: 1.5rem; color: #25a25a !important"
-        >
-          <img
-            src="images/unique_baloon_logo.png"
-            class="img-fluid"
-            width="130"
-            height=""
-            alt=""
-          />
+        <a class="navbar-brand fw-bold d-flex align-items-center gap-2 me-4" href="index.html" style="font-size: 1.5rem; color: #25a25a !important">
+          <img src="images/unique_baloon_logo.png" class="img-fluid" width="130" alt="Unique Balloons" />
+        </a>
         <a href="index.html" class="btn btn-outline-secondary btn-sm ms-auto fw-medium">Back to Home</a>
       </div>
     </nav>
@@ -75,11 +80,11 @@
                   <i class="fa-solid fa-store fs-3"></i>
                 </div>
                 <h3 class="fw-bold text-dark">List Your Business</h3>
-                <p class="text-muted small">Fill in the details below to get listed on Event Bucket</p>
+                <p class="text-muted small">Fill in the details below to get listed</p>
               </div>
 
               <div class="card-body p-4 p-md-5">
-                <form>
+                <form id="businessForm">
                   
                   <h6 class="text-uppercase fw-bold text-muted small mb-3 border-bottom pb-2">Basic Information</h6>
                   
@@ -188,10 +193,108 @@
       </div>
     </section>
 
+    <div class="modal fade" id="otpModal" tabindex="-1" aria-labelledby="otpModalLabel" aria-hidden="true" data-bs-backdrop="static">
+      <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content border-0 shadow-lg rounded-4">
+          <div class="modal-header border-0 pb-0 justify-content-center position-relative">
+            <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="text-center mt-3">
+              <div class="bg-success bg-opacity-10 text-success rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                <i class="fa-solid fa-envelope-open-text fs-3"></i>
+              </div>
+              <h4 class="modal-title fw-bold text-dark" id="otpModalLabel">Verify Email</h4>
+              <p class="text-muted small mb-0 mt-2">We've sent a 4-digit code to<br>
+                <strong id="displayEmail" class="text-dark"></strong>
+              </p>
+            </div>
+          </div>
+          <div class="modal-body px-4 pb-4 pt-3">
+            
+            <form id="otpForm">
+              <div class="d-flex justify-content-between gap-2 mb-4 otp-container">
+                <input type="text" class="form-control bg-light otp-box" maxlength="1" pattern="[0-9]" inputmode="numeric" required>
+                <input type="text" class="form-control bg-light otp-box" maxlength="1" pattern="[0-9]" inputmode="numeric" required disabled>
+                <input type="text" class="form-control bg-light otp-box" maxlength="1" pattern="[0-9]" inputmode="numeric" required disabled>
+                <input type="text" class="form-control bg-light otp-box" maxlength="1" pattern="[0-9]" inputmode="numeric" required disabled>
+              </div>
+              
+              <button type="button" class="btn btn-theme w-100 rounded-pill mb-3" id="verifyOtpBtn">
+                Verify & Submit <i class="fa-solid fa-check ms-1"></i>
+              </button>
+              
+              <div class="text-center">
+                <span class="text-muted small">Didn't receive code? </span>
+                <a href="javascript:void(0)" class="theme-red text-decoration-none fw-bold small">Resend OTP</a>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
     <footer class="text-center py-4 text-muted small">
       © 2026 Unique Baloons Decoration. All rights reserved.
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        
+        const businessForm = document.getElementById('businessForm');
+        const otpModal = new bootstrap.Modal(document.getElementById('otpModal'));
+        const emailInput = document.getElementById('email');
+        const displayEmail = document.getElementById('displayEmail');
+        
+        const otpInputs = document.querySelectorAll('.otp-box');
+
+        // 1. Show Modal on Form Submit
+        businessForm.addEventListener('submit', function(e) {
+          e.preventDefault(); // Rokega page reload hone se
+          
+          if(businessForm.checkValidity()) {
+            // Email dikhao modal ke andar
+            displayEmail.innerText = emailInput.value;
+            // Modal kholo
+            otpModal.show();
+            
+            // Thoda timeout dekar pehle box pe focus karo
+            setTimeout(() => {
+              otpInputs[0].focus();
+            }, 500);
+          } else {
+            businessForm.reportValidity();
+          }
+        });
+
+        // 2. OTP Auto-Focus Magic
+        otpInputs.forEach((input, index) => {
+          input.addEventListener('keyup', function(e) {
+            
+            const currentInput = input;
+            const nextInput = input.nextElementSibling;
+            const prevInput = input.previousElementSibling;
+
+            // Agar user ne number type kiya toh aage badho
+            if (currentInput.value.length > 0) {
+              if (nextInput) {
+                nextInput.removeAttribute("disabled");
+                nextInput.focus();
+              }
+            }
+
+            // Agar user ne backspace (delete) dabaya toh piche aao
+            if (e.key === "Backspace") {
+              currentInput.value = "";
+              if (prevInput) {
+                prevInput.focus();
+              }
+            }
+          });
+        });
+
+      });
+    </script>
   </body>
 </html>
