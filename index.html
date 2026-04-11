@@ -86,19 +86,39 @@
               </a>
             </div>
 
-            <div class="input-group border-0 ps-2" style="width: 70%">
+            <!-- ============= Search Bar Start  ============ -->
+           <div class="input-group border-0 ps-2 dropdown" style="width: 70%">
               <input
                 type="text"
-                class="form-control border-0 bg-transparent shadow-none px-2"
-                placeholder="Search decorators, venues..."
+                class="form-control border-0 bg-transparent shadow-none px-2 dropdown-toggle"
+                id="categorySearchInput"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                readonly
+                style="cursor: pointer;"
+                placeholder="Select service category..."
               />
+              
+              <ul class="dropdown-menu w-100 border-0 shadow mt-2 category-dropdown-menu" aria-labelledby="categorySearchInput">
+                <li><h6 class="dropdown-header text-muted fw-bold">Popular Services</h6></li>
+                <li><a class="dropdown-item category-option" href="#" data-category="Balloon Arches"><i class="fa-solid fa-champagne-glasses text-theme me-2"></i> Balloon Arches</a></li>
+                <li><a class="dropdown-item category-option" href="#" data-category="Theme Decor"><i class="fa-solid fa-masks-theater text-theme me-2"></i> Theme Decor</a></li>
+                <li><a class="dropdown-item category-option" href="#" data-category="Kids Party"><i class="fa-solid fa-child-reaching text-theme me-2"></i> Kids Party</a></li>
+                <li><a class="dropdown-item category-option" href="#" data-category="Welcome Decor"><i class="fa-solid fa-door-open text-theme me-2"></i> Welcome Decor</a></li>
+                <li><a class="dropdown-item category-option" href="#" data-category="Birthday"><i class="fa-solid fa-cake-candles text-theme me-2"></i> Birthday Setup</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item category-option text-danger fw-bold" href="#" data-category="all"><i class="fa-solid fa-xmark me-2"></i> Clear Selection</a></li>
+              </ul>
+
               <button
                 class="btn btn-success rounded-circle d-flex align-items-center justify-content-center p-2 flex-shrink-0"
                 style="width: 35px; height: 35px; background-color: #25a25a"
               >
-                <i class="fa-solid fa-magnifying-glass text-white small"></i>
+                <i class="fa-solid fa-chevron-down text-white small"></i>
               </button>
             </div>
+             <!-- ============= Search Bar Start  ============ -->
+
           </div>
 
           <div class="d-flex align-items-center gap-3 ms-4">
@@ -146,21 +166,33 @@
           </a>
         </div>
 
-        <div class="flex-grow-1" style="width: 65%">
-          <div class="input-group">
-            <span
-              class="input-group-text bg-light border-end-0 rounded-start-pill ps-2 pe-1 text-secondary"
-            >
+           <!-- ============== Mobile Search Start ============ -->
+        <div class="flex-grow-1 dropdown" style="width: 65%">
+          <div class="input-group border rounded-pill overflow-hidden bg-light" data-bs-toggle="dropdown" style="cursor: pointer;">
+            <span class="input-group-text bg-transparent border-0 ps-2 pe-1 text-secondary">
               <i class="fa-solid fa-magnifying-glass small"></i>
             </span>
             <input
               type="text"
-              class="form-control bg-light border-start-0 rounded-end-pill shadow-none px-2"
-              placeholder="Search..."
-              style="font-size: 0.85rem"
+              class="form-control bg-transparent border-0 shadow-none px-2 dropdown-toggle category-search-input"
+              readonly
+              style="font-size: 0.85rem; cursor: pointer; pointer-events: none;"
+              placeholder="Select category..."
             />
           </div>
+
+          <ul class="dropdown-menu w-100 border-0 shadow mt-2 category-dropdown-menu">
+            <li><h6 class="dropdown-header text-muted fw-bold">Popular Services</h6></li>
+            <li><a class="dropdown-item category-option" href="#" data-category="Balloon Arches"><i class="fa-solid fa-champagne-glasses text-theme me-2"></i> Balloon Arches</a></li>
+            <li><a class="dropdown-item category-option" href="#" data-category="Theme Decor"><i class="fa-solid fa-masks-theater text-theme me-2"></i> Theme Decor</a></li>
+            <li><a class="dropdown-item category-option" href="#" data-category="Kids Party"><i class="fa-solid fa-child-reaching text-theme me-2"></i> Kids Party</a></li>
+            <li><a class="dropdown-item category-option" href="#" data-category="Welcome Decor"><i class="fa-solid fa-door-open text-theme me-2"></i> Welcome Decor</a></li>
+            <li><a class="dropdown-item category-option" href="#" data-category="Birthday"><i class="fa-solid fa-cake-candles text-theme me-2"></i> Birthday Setup</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item category-option text-danger fw-bold" href="#" data-category="all"><i class="fa-solid fa-xmark me-2"></i> Clear Selection</a></li>
+          </ul>
         </div>
+       <!-- ============== Mobile Search End ============ -->
       </div>
     </div>
 
@@ -1559,6 +1591,6 @@
     -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

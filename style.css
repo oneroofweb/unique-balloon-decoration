@@ -70,6 +70,33 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
+
+/* Dropdown Input Fix */
+#categorySearchInput {
+  background-color: transparent !important;
+}
+
+/* Category Dropdown Menu Styling */
+.category-dropdown-menu {
+  border-radius: 12px;
+  padding: 10px 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.category-dropdown-menu .dropdown-item {
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.category-dropdown-menu .dropdown-item:hover,
+.category-dropdown-menu .dropdown-item:focus {
+  background-color: #e8f5e9; /* Light green hover */
+  color: #25a25a;
+}
+
 /* --------------------------------------------------------------------------
    3. BUTTONS & INPUTS
    -------------------------------------------------------------------------- */

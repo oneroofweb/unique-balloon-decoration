@@ -5,23 +5,6 @@
 document.addEventListener("DOMContentLoaded", function() {
 
     /* --------------------------------------------------------------------------
-       1. GLOBAL UTILITIES
-       -------------------------------------------------------------------------- */
-    
-    // Check local storage for previously selected city and update Nav bars if needed
-    // const savedCity = localStorage.getItem('selectedCity');
-    // if (savedCity) {
-    //     // Updates Desktop Nav
-    //     const desktopCityLabel = document.getElementById('desktopNavCity');
-    //     if (desktopCityLabel) desktopCityLabel.innerText = savedCity;
-        
-    //     // Updates Mobile Nav
-    //     const mobileCityLabel = document.getElementById('mobileSelectedCity');
-    //     if (mobileCityLabel) mobileCityLabel.innerText = savedCity;
-    // }
-
-
-    /* --------------------------------------------------------------------------
        2. LISTING PAGE: FILTER LOGIC
        -------------------------------------------------------------------------- */
        
@@ -172,3 +155,48 @@ function filterCities() {
         noCityFound.style.display = (visibleCount === 0 && input.length > 0) ? 'block' : 'none';
     }
 }
+
+/* --------------------------------------------------------------------------
+   6. Navbar Category Selection
+   -------------------------------------------------------------------------- */
+   
+  document.addEventListener('DOMContentLoaded', function() {
+    
+    const categoryOptions = document.querySelectorAll('.category-option');
+    const searchInputs = document.querySelectorAll('.category-search-input'); // Ab ID nahi, Class use kar rahe hain
+    const listingCards = document.querySelectorAll('.listing-card');
+
+    categoryOptions.forEach(option => {
+      option.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // 1. Get Selected Category
+        const selectedCategory = this.getAttribute('data-category');
+        const selectedText = this.innerText.trim();
+        
+        // 2. Update Both Mobile & Desktop Input Fields
+        searchInputs.forEach(input => {
+          if(selectedCategory === 'all') {
+            input.value = '';
+          } else {
+            input.value = selectedText;
+          }
+        });
+
+        // 3. Filter the Listing Cards
+        listingCards.forEach(card => {
+          if (selectedCategory === 'all') {
+            card.style.display = 'flex'; // Reset (Show all)
+          } else {
+            const cardText = card.innerText || card.textContent;
+            if (cardText.includes(selectedCategory)) {
+              card.style.display = 'flex'; // Match found
+            } else {
+              card.style.display = 'none'; // Hide
+            }
+          }
+        });
+      });
+    });
+
+  });
