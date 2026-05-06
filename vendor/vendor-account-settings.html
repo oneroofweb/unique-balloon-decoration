@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Account Settings | Vendor Panel</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../admin/admin-style.css" />
+</head>
+<body class="bg-light">
+
+    <div class="d-flex" id="wrapper">
+
+        <aside id="sidebar-wrapper" class="shadow-sm bg-white">
+            <div class="sidebar-heading text-center py-3 py-md-4 fs-5 fw-bold border-bottom">
+                <span style="color: #25a25a;">Vendor</span> Panel
+            </div>
+            <nav class="list-group list-group-flush my-2 my-md-3 px-2">
+                <a href="vendor-dashboard.html" class="list-group-item list-group-item-action rounded mb-1">
+                    <i class="fa-solid fa-chart-pie"></i> <span>Dashboard</span>
+                </a>
+                <a href="vendor-add-listing.html" class="list-group-item list-group-item-action rounded mb-1">
+                    <i class="fa-solid fa-store"></i> <span>My Business Profile</span>
+                </a>
+                <a href="/vendor/vendor-leads.html" class="list-group-item list-group-item-action rounded mb-1">
+                    <i class="fa-solid fa-headset"></i> <span>Customer Leads</span>
+                </a>
+                <a href="/vendor/vendor-gallery.html" class="list-group-item list-group-item-action rounded mb-1">
+                    <i class="fa-solid fa-images"></i> <span>Photo Gallery</span>
+                </a>
+                <a href="/vendor/vendor-reviews.html" class="list-group-item list-group-item-action rounded mb-1">
+                    <i class="fa-solid fa-star"></i> <span>My Reviews</span>
+                </a>
+                <a href="/vendor/vendor-account-settings.html" class="list-group-item list-group-item-action active rounded mb-1">
+                    <i class="fa-solid fa-gear"></i> <span>Account Settings</span>
+                </a>
+            </nav>
+        </aside>
+
+        <main id="page-content-wrapper" class="w-100">
+            
+            <header class="navbar navbar-expand-lg navbar-light bg-white py-2 py-md-3 px-3 px-md-4 shadow-sm sticky-top">
+                <div class="d-flex align-items-center">
+                    <i class="fa-solid fa-bars fs-5 fs-md-4 me-3 cursor-pointer text-dark" id="menu-toggle"></i>
+                    <h5 class="mb-0 fw-bold text-dark d-none d-md-block">Settings</h5>
+                </div>
+                <div class="ms-auto d-flex align-items-center">
+                    <div class="dropdown">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center text-dark" href="#" role="button" data-bs-toggle="dropdown">
+                            <img src="https://ui-avatars.com/api/?name=Rahul+Sharma&background=25a25a&color=fff" class="rounded-circle me-2" width="32">
+                            <span class="fw-medium small d-none d-md-block">Rahul Sharma</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end shadow border-0 mt-2">
+                            <li><a class="dropdown-item text-success fw-medium small" href="vendor-account-settings.html"><i class="fa-solid fa-gear me-2"></i> Account Settings</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-danger fw-medium small" href="login.html"><i class="fa-solid fa-power-off me-2"></i> Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+            <div class="container-fluid p-3 p-md-4">
+                
+                <section class="mb-3 mb-md-4">
+                    <h3 class="fw-bold text-dark mb-1">Account Settings</h3>
+                    <p class="text-muted small mb-0">Manage your personal information and login security.</p>
+                </section>
+
+                <div class="row g-4">
+                    
+                    <div class="col-lg-7">
+                        <div class="card border-0 shadow-sm rounded-3 mb-4">
+                            <div class="card-header bg-white border-bottom pt-3 pb-2 px-4">
+                                <h6 class="fw-bold text-dark mb-0">Personal Information</h6>
+                            </div>
+                            <div class="card-body p-4">
+                                <form>
+                                    <div class="d-flex align-items-center mb-4">
+                                        <div class="position-relative me-3">
+                                            <img src="https://ui-avatars.com/api/?name=Rahul+Sharma&background=25a25a&color=fff&size=128" class="rounded-circle shadow-sm" width="80" height="80" alt="Avatar">
+                                            <button type="button" class="btn btn-sm btn-light border rounded-circle position-absolute bottom-0 end-0" style="width: 30px; height: 30px; padding: 0;" title="Change Photo">
+                                                <i class="fa-solid fa-camera text-muted" style="font-size: 0.75rem;"></i>
+                                            </button>
+                                        </div>
+                                        <div>
+                                            <h6 class="fw-bold mb-1">Profile Avatar</h6>
+                                            <p class="text-muted small mb-0">JPG or PNG no larger than 2MB</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label class="form-label small fw-bold text-muted">First Name</label>
+                                            <input type="text" class="form-control bg-light border-0 shadow-none py-2" value="Rahul" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label small fw-bold text-muted">Last Name</label>
+                                            <input type="text" class="form-control bg-light border-0 shadow-none py-2" value="Sharma" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label small fw-bold text-muted">Email Address</label>
+                                            <input type="email" class="form-control bg-light border-0 shadow-none py-2 text-muted" value="rahul.decor@example.com" disabled title="Contact admin to change login email">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label small fw-bold text-muted">Personal Phone</label>
+                                            <input type="tel" class="form-control bg-light border-0 shadow-none py-2" value="9876543210" required>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="mt-4 text-end">
+                                        <button type="submit" class="btn text-white rounded-pill px-4 shadow-sm fw-medium" style="background-color: #25a25a; font-size: 0.85rem;">
+                                            Save Changes
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="card border-0 shadow-sm rounded-3 mb-4">
+                            <div class="card-header bg-white border-bottom pt-3 pb-2 px-4">
+                                <h6 class="fw-bold text-dark mb-0">Change Password</h6>
+                            </div>
+                            <div class="card-body p-4">
+                                <form>
+                                    <div class="mb-3">
+                                        <label class="form-label small fw-bold text-muted">Current Password</label>
+                                        <input type="password" class="form-control bg-light border-0 shadow-none py-2" placeholder="Enter current password" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label small fw-bold text-muted">New Password</label>
+                                        <input type="password" class="form-control bg-light border-0 shadow-none py-2" placeholder="Min. 8 characters" required>
+                                    </div>
+                                    <div class="mb-4">
+                                        <label class="form-label small fw-bold text-muted">Confirm New Password</label>
+                                        <input type="password" class="form-control bg-light border-0 shadow-none py-2" placeholder="Retype new password" required>
+                                    </div>
+                                    <div class="text-end">
+                                        <button type="submit" class="btn text-white rounded-pill w-100 shadow-sm fw-medium" style="background-color: #25a25a; font-size: 0.85rem;">
+                                            Update Password
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="card border-0 shadow-sm rounded-3 border-danger border-opacity-25">
+                            <div class="card-body p-4 text-center">
+                                <i class="fa-solid fa-triangle-exclamation text-danger fs-3 mb-2"></i>
+                                <h6 class="fw-bold text-dark mb-1">Delete Account</h6>
+                                <p class="text-muted small mb-3">Once you delete your account, your business listing will be permanently removed.</p>
+                                <button class="btn btn-outline-danger btn-sm rounded-pill px-4 fw-medium shadow-none">Delete My Account</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../admin/admin-script.js"></script>
+</body>
+</html>

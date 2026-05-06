@@ -1,0 +1,108 @@
+:root {
+    --theme-color: #25a25a;
+    --sidebar-width: 250px;
+    --text-muted: #6c757d;
+}
+
+/* Base Font Scaling for Mobile First */
+html {
+    font-size: 13px; /* Smaller base font for mobile */
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px; /* Normal font size for desktop */
+    }
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    background-color: #f4f6f9;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+/* ================= Sidebar CSS ================= */
+#wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+#sidebar-wrapper {
+    min-width: var(--sidebar-width);
+    max-width: var(--sidebar-width);
+    transition: margin 0.3s ease-out;
+    border-right: 1px solid #e9ecef;
+}
+
+#sidebar-wrapper .list-group-item {
+    border: none;
+    padding: 10px 16px;
+    font-size: 0.95rem;
+    transition: all 0.2s ease-in-out;
+    color: #495057; 
+    display: flex;
+    align-items: center;
+}
+
+#sidebar-wrapper .list-group-item i {
+    width: 28px; 
+    font-size: 1.1rem;
+    color: #adb5bd;
+}
+
+#sidebar-wrapper .list-group-item:hover {
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+#sidebar-wrapper .list-group-item.active {
+    background-color: rgba(37, 162, 90, 0.1);
+    color: var(--theme-color);
+    font-weight: 600;
+}
+#sidebar-wrapper .list-group-item.active i {
+    color: var(--theme-color);
+}
+
+/* ================= Main Content CSS ================= */
+#page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+    transition: all 0.3s ease-out;
+}
+
+.table th {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* ================= Sidebar Toggle Logic ================= */
+/* Desktop View */
+@media (min-width: 769px) {
+    #wrapper.toggled #sidebar-wrapper {
+        margin-left: calc(var(--sidebar-width) * -1);
+    }
+}
+
+/* Mobile/Tablet View */
+@media (max-width: 768px) {
+    #sidebar-wrapper {
+        margin-left: calc(var(--sidebar-width) * -1);
+        position: fixed;
+        height: 100vh;
+        z-index: 1050; 
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        margin-left: 0;
+    }
+    
+    /* Adjusting card layouts slightly for mobile screens */
+    .card-body, .p-4 {
+        padding: 1rem !important;
+    }
+}

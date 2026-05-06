@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Master Settings | Super Admin</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="admin-style.css" />
+</head>
+
+<body class="bg-light">
+
+    <div class="d-flex" id="wrapper">
+
+        <aside id="sidebar-wrapper" class="shadow-sm bg-white">
+            <div class="sidebar-heading text-center py-3 py-md-4 fs-5 fw-bold border-bottom">
+                <span style="color: #25a25a;">Unique</span> Admin
+            </div>
+            <nav class="list-group list-group-flush my-2 my-md-3 px-2">
+                <a href="admin.html" class="list-group-item list-group-item-action rounded mb-1">
+                    <i class="fa-solid fa-house"></i> <span>Dashboard</span>
+                </a>
+                <a href="admin-listings.html" class="list-group-item list-group-item-action rounded mb-1">
+                    <i class="fa-solid fa-store"></i> <span>Business Listings</span>
+                </a>
+                <a href="admin-leads.html" class="list-group-item list-group-item-action rounded mb-1">
+                    <i class="fa-solid fa-headset"></i> <span>Leads & Enquiries</span>
+                </a>
+                <a href="admin-settings.html" class="list-group-item list-group-item-action active rounded mb-1">
+                    <i class="fa-solid fa-layer-group"></i> <span>Master Settings</span>
+                </a>
+                <a href="admin-city-pages.html" class="list-group-item list-group-item-action rounded mb-1">
+                    <i class="fa-solid fa-layer-group"></i> <span>City SEO Content</span>
+                </a>
+                <a href="admin-reviews.html" class="list-group-item list-group-item-action rounded mb-1">
+                    <i class="fa-solid fa-star"></i> <span>Reviews</span>
+                </a>
+                <a href="user-staff.html" class="list-group-item list-group-item-action rounded mb-1">
+                    <i class="fa-solid fa-users"></i> <span>Users & Staff</span>
+                </a>
+            </nav>
+        </aside>
+
+        <main id="page-content-wrapper" class="w-100">
+
+            <header
+                class="navbar navbar-expand-lg navbar-light bg-white py-2 py-md-3 px-3 px-md-4 shadow-sm sticky-top">
+                <div class="d-flex align-items-center">
+                    <i class="fa-solid fa-bars fs-5 fs-md-4 me-3 cursor-pointer text-dark" id="menu-toggle"></i>
+                    <h5 class="mb-0 fw-bold text-dark d-none d-md-block">Master Settings</h5>
+                </div>
+
+                <div class="ms-auto d-flex align-items-center">
+                    <div class="dropdown">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center text-dark" href="#" role="button"
+                            data-bs-toggle="dropdown">
+                            <img src="https://ui-avatars.com/api/?name=Admin&background=25a25a&color=fff" alt="Admin"
+                                class="rounded-circle me-2" width="32">
+                            <span class="fw-medium small d-none d-md-block">Super Admin</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end shadow border-0 mt-2">
+                            <li><a class="dropdown-item text-danger fw-medium small" href="#"><i
+                                        class="fa-solid fa-power-off me-2"></i> Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+            <div class="container-fluid p-3 p-md-4">
+
+                <section class="mb-3 mb-md-4">
+                    <h3 class="fw-bold text-dark mb-1">Data Management</h3>
+                    <p class="text-muted small mb-0">Manage Cities, Localities, and Service Categories used across the
+                        website.</p>
+                </section>
+
+                <section class="mb-4">
+                    <ul class="nav nav-pills custom-tabs gap-2" id="masterTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active px-4 py-2 fw-medium rounded-pill border" id="cities-tab"
+                                data-bs-toggle="pill" data-bs-target="#cities" type="button" role="tab">Cities</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link px-4 py-2 fw-medium rounded-pill border" id="localities-tab"
+                                data-bs-toggle="pill" data-bs-target="#localities" type="button"
+                                role="tab">Localities</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link px-4 py-2 fw-medium rounded-pill border" id="categories-tab"
+                                data-bs-toggle="pill" data-bs-target="#categories" type="button"
+                                role="tab">Services</button>
+                        </li>
+                    </ul>
+                </section>
+
+                <div class="tab-content" id="masterTabsContent">
+
+                    <div class="tab-pane fade show active" id="cities" role="tabpanel">
+                        <div class="card border-0 shadow-sm rounded-3">
+                            <div
+                                class="card-header bg-white border-bottom pt-3 pb-2 px-3 px-md-4 d-flex justify-content-between align-items-center flex-wrap gap-2">
+                                <h6 class="fw-bold text-dark mb-0">Available Cities</h6>
+                                <button class="btn btn-sm text-white px-3 shadow-sm rounded-pill" data-bs-toggle="modal"
+                                    data-bs-target="#addCityModal"
+                                    style="background-color: #25a25a; font-size: 0.8rem;">
+                                    <i class="fa-solid fa-plus me-1"></i> Add City
+                                </button>
+                            </div>
+                            <div class="card-body p-0">
+                                <div class="table-responsive">
+                                    <table class="table table-hover align-middle text-nowrap mb-0">
+                                        <thead class="bg-light text-muted small text-uppercase"
+                                            style="font-size: 0.75rem;">
+                                            <tr>
+                                                <th class="ps-3 ps-md-4 py-2 py-md-3">City Name</th>
+                                                <th class="py-2 py-md-3">Total Listings</th>
+                                                <th class="py-2 py-md-3">Status</th>
+                                                <th class="text-end pe-3 pe-md-4 py-2 py-md-3">Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="small">
+                                            <tr>
+                                                <td class="ps-3 ps-md-4 py-2 py-md-3"><span class="fw-bold text-dark"
+                                                        style="font-size: 0.85rem;">Lucknow</span></td>
+                                                <td><span class="text-muted fw-medium"
+                                                        style="font-size: 0.8rem;">850</span></td>
+                                                <td><span
+                                                        class="badge bg-success bg-opacity-10 text-success rounded-pill px-3 py-1">Active</span>
+                                                </td>
+                                                <td class="text-end pe-3 pe-md-4">
+                                                    <button class="btn btn-sm btn-light text-dark rounded-circle me-1"
+                                                        data-bs-toggle="modal" data-bs-target="#editModal"
+                                                        style="width: 30px; height: 30px;"><i
+                                                            class="fa-solid fa-pen"></i></button>
+                                                    <button class="btn btn-sm btn-light text-danger rounded-circle"
+                                                        data-bs-toggle="modal" data-bs-target="#deleteModal"
+                                                        style="width: 30px; height: 30px;"><i
+                                                            class="fa-solid fa-trash"></i></button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="ps-3 ps-md-4 py-2 py-md-3"><span class="fw-bold text-dark"
+                                                        style="font-size: 0.85rem;">Kanpur</span></td>
+                                                <td><span class="text-muted fw-medium"
+                                                        style="font-size: 0.8rem;">320</span></td>
+                                                <td><span
+                                                        class="badge bg-success bg-opacity-10 text-success rounded-pill px-3 py-1">Active</span>
+                                                </td>
+                                                <td class="text-end pe-3 pe-md-4">
+                                                    <button class="btn btn-sm btn-light text-dark rounded-circle me-1"
+                                                        data-bs-toggle="modal" data-bs-target="#editModal"
+                                                        style="width: 30px; height: 30px;"><i
+                                                            class="fa-solid fa-pen"></i></button>
+                                                    <button class="btn btn-sm btn-light text-danger rounded-circle"
+                                                        data-bs-toggle="modal" data-bs-target="#deleteModal"
+                                                        style="width: 30px; height: 30px;"><i
+                                                            class="fa-solid fa-trash"></i></button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="localities" role="tabpanel">
+                        <div class="card border-0 shadow-sm rounded-3">
+                            <div
+                                class="card-header bg-white border-bottom pt-3 pb-2 px-3 px-md-4 d-flex justify-content-between align-items-center flex-wrap gap-2">
+                                <div class="d-flex align-items-center gap-3">
+                                    <h6 class="fw-bold text-dark mb-0">Localities</h6>
+                                    <select
+                                        class="form-select form-select-sm border-0 bg-light shadow-none cursor-pointer"
+                                        style="font-size: 0.8rem; max-width: 150px;">
+                                        <option selected>Filter by City</option>
+                                        <option>Lucknow</option>
+                                        <option>Kanpur</option>
+                                    </select>
+                                </div>
+                                <button class="btn btn-sm text-white px-3 shadow-sm rounded-pill" data-bs-toggle="modal"
+                                    data-bs-target="#addLocalityModal"
+                                    style="background-color: #25a25a; font-size: 0.8rem;">
+                                    <i class="fa-solid fa-plus me-1"></i> Add Locality
+                                </button>
+                            </div>
+                            <div class="card-body p-0">
+                                <div class="table-responsive">
+                                    <table class="table table-hover align-middle text-nowrap mb-0">
+                                        <thead class="bg-light text-muted small text-uppercase"
+                                            style="font-size: 0.75rem;">
+                                            <tr>
+                                                <th class="ps-3 ps-md-4 py-2 py-md-3">Locality Name</th>
+                                                <th class="py-2 py-md-3">Parent City</th>
+                                                <th class="py-2 py-md-3">Status</th>
+                                                <th class="text-end pe-3 pe-md-4 py-2 py-md-3">Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="small">
+                                            <tr>
+                                                <td class="ps-3 ps-md-4 py-2 py-md-3"><span class="fw-bold text-dark"
+                                                        style="font-size: 0.85rem;">Gomti Nagar</span></td>
+                                                <td><span class="text-muted fw-medium"
+                                                        style="font-size: 0.8rem;">Lucknow</span></td>
+                                                <td><span
+                                                        class="badge bg-success bg-opacity-10 text-success rounded-pill px-3 py-1">Active</span>
+                                                </td>
+                                                <td class="text-end pe-3 pe-md-4">
+                                                    <button class="btn btn-sm btn-light text-dark rounded-circle me-1"
+                                                        data-bs-toggle="modal" data-bs-target="#editModal"
+                                                        style="width: 30px; height: 30px;"><i
+                                                            class="fa-solid fa-pen"></i></button>
+                                                    <button class="btn btn-sm btn-light text-danger rounded-circle"
+                                                        data-bs-toggle="modal" data-bs-target="#deleteModal"
+                                                        style="width: 30px; height: 30px;"><i
+                                                            class="fa-solid fa-trash"></i></button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="categories" role="tabpanel">
+                        <div class="card border-0 shadow-sm rounded-3">
+                            <div
+                                class="card-header bg-white border-bottom pt-3 pb-2 px-3 px-md-4 d-flex justify-content-between align-items-center flex-wrap gap-2">
+                                <h6 class="fw-bold text-dark mb-0">Service Categories</h6>
+                                <button class="btn btn-sm text-white px-3 shadow-sm rounded-pill" data-bs-toggle="modal"
+                                    data-bs-target="#addCategoryModal"
+                                    style="background-color: #25a25a; font-size: 0.8rem;">
+                                    <i class="fa-solid fa-plus me-1"></i> Add Category
+                                </button>
+                            </div>
+                            <div class="card-body p-0">
+                                <div class="table-responsive">
+                                    <table class="table table-hover align-middle text-nowrap mb-0">
+                                        <thead class="bg-light text-muted small text-uppercase"
+                                            style="font-size: 0.75rem;">
+                                            <tr>
+                                                <th class="ps-3 ps-md-4 py-2 py-md-3">Category</th>
+                                                <th class="py-2 py-md-3">Icon / Class</th>
+                                                <th class="py-2 py-md-3">Status</th>
+                                                <th class="text-end pe-3 pe-md-4 py-2 py-md-3">Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="small">
+                                            <tr>
+                                                <td class="ps-3 ps-md-4 py-2 py-md-3">
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="bg-light rounded d-flex align-items-center justify-content-center text-success me-2"
+                                                            style="width: 35px; height: 35px;">
+                                                            <i class="fa-solid fa-cake-candles"></i>
+                                                        </div>
+                                                        <span class="fw-bold text-dark"
+                                                            style="font-size: 0.85rem;">Birthday Setup</span>
+                                                    </div>
+                                                </td>
+                                                <td><code class="text-muted"
+                                                        style="font-size: 0.75rem;">fa-solid fa-cake-candles</code></td>
+                                                <td><span
+                                                        class="badge bg-success bg-opacity-10 text-success rounded-pill px-3 py-1">Active</span>
+                                                </td>
+                                                <td class="text-end pe-3 pe-md-4">
+                                                    <button class="btn btn-sm btn-light text-dark rounded-circle me-1"
+                                                        data-bs-toggle="modal" data-bs-target="#editModal"
+                                                        style="width: 30px; height: 30px;"><i
+                                                            class="fa-solid fa-pen"></i></button>
+                                                    <button class="btn btn-sm btn-light text-danger rounded-circle"
+                                                        data-bs-toggle="modal" data-bs-target="#deleteModal"
+                                                        style="width: 30px; height: 30px;"><i
+                                                            class="fa-solid fa-trash"></i></button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="modal fade" id="addCityModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header border-bottom-0 pb-0">
+                    <h6 class="fw-bold mb-0">Add New City</h6>
+                    <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label small fw-medium text-muted">City Name</label>
+                            <input type="text" class="form-control bg-light border-0 shadow-none py-2"
+                                placeholder="e.g., Lucknow" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small fw-medium text-muted">Status</label>
+                            <select class="form-select bg-light border-0 shadow-none py-2">
+                                <option value="1">Active</option>
+                                <option value="0">Inactive</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn w-100 text-white rounded-pill shadow-sm py-2"
+                            style="background-color: #25a25a; font-size: 0.85rem;">Save City</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="addLocalityModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header border-bottom-0 pb-0">
+                    <h6 class="fw-bold mb-0">Add New Locality</h6>
+                    <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label small fw-medium text-muted">Parent City</label>
+                            <select class="form-select bg-light border-0 shadow-none py-2" required>
+                                <option value="" disabled selected>Select a city</option>
+                                <option value="lucknow">Lucknow</option>
+                                <option value="kanpur">Kanpur</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small fw-medium text-muted">Locality Name</label>
+                            <input type="text" class="form-control bg-light border-0 shadow-none py-2"
+                                placeholder="e.g., Gomti Nagar" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small fw-medium text-muted">Status</label>
+                            <select class="form-select bg-light border-0 shadow-none py-2">
+                                <option value="1">Active</option>
+                                <option value="0">Inactive</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn w-100 text-white rounded-pill shadow-sm py-2"
+                            style="background-color: #25a25a; font-size: 0.85rem;">Save Locality</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="addCategoryModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header border-bottom-0 pb-0">
+                    <h6 class="fw-bold mb-0">Add New Category</h6>
+                    <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label small fw-medium text-muted">Category Name</label>
+                            <input type="text" class="form-control bg-light border-0 shadow-none py-2"
+                                placeholder="e.g., Birthday Setup" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small fw-medium text-muted">FontAwesome Icon Class</label>
+                            <input type="text" class="form-control bg-light border-0 shadow-none py-2"
+                                placeholder="e.g., fa-solid fa-cake-candles">
+                            <small class="text-muted" style="font-size: 0.7rem;">Copy from fontawesome.com</small>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small fw-medium text-muted">Status</label>
+                            <select class="form-select bg-light border-0 shadow-none py-2">
+                                <option value="1">Active</option>
+                                <option value="0">Inactive</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn w-100 text-white rounded-pill shadow-sm py-2"
+                            style="background-color: #25a25a; font-size: 0.85rem;">Save Category</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="editModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header border-bottom-0 pb-0">
+                    <h6 class="fw-bold mb-0">Edit Details</h6>
+                    <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center py-4">
+                    <i class="fa-solid fa-code text-muted fs-1 mb-3"></i>
+                    <p class="text-muted small mb-0">Backend Developer will load the specific form fields here
+                        dynamically via AJAX when the Edit button is clicked.</p>
+                </div>
+                <div class="modal-footer border-0 pt-0">
+                    <button type="button" class="btn btn-light rounded-pill w-100"
+                        data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content border-0 shadow text-center p-4">
+                <div class="text-danger mb-3">
+                    <i class="fa-solid fa-circle-exclamation fs-1"></i>
+                </div>
+                <h6 class="fw-bold mb-2">Are you sure?</h6>
+                <p class="text-muted small mb-4">Do you really want to delete this record? This process cannot be
+                    undone.</p>
+                <div class="d-flex gap-2">
+                    <button type="button" class="btn btn-light w-50 rounded-pill fw-medium shadow-none"
+                        data-bs-dismiss="modal" style="font-size: 0.85rem;">Cancel</button>
+                    <button type="button" class="btn btn-danger w-50 rounded-pill fw-medium shadow-none"
+                        style="font-size: 0.85rem;">Yes, Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="admin-script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var tabEls = document.querySelectorAll('#masterTabs .nav-link');
+            tabEls.forEach(function (tab) {
+                tab.addEventListener('shown.bs.tab', function (event) {
+                    tabEls.forEach(t => {
+                        t.style.backgroundColor = '#fff';
+                        t.style.color = '#212529';
+                    });
+                    event.target.style.backgroundColor = '#25a25a';
+                    event.target.style.color = '#fff';
+                });
+            });
+            var firstTab = document.querySelector('#masterTabs .nav-link.active');
+            if (firstTab) {
+                firstTab.style.backgroundColor = '#25a25a';
+                firstTab.style.color = '#fff';
+            }
+        });
+    </script>
+</body>
+
+</html>

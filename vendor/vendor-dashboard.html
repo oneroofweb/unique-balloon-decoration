@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vendor Dashboard | Unique Balloons</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../admin/admin-style.css" />
+</head>
+<body class="bg-light">
+
+    <div class="d-flex" id="wrapper">
+
+        <aside id="sidebar-wrapper" class="shadow-sm bg-white">
+            <div class="sidebar-heading text-center py-3 py-md-4 fs-5 fw-bold border-bottom">
+                <span style="color: #25a25a;">Vendor</span> Panel
+            </div>
+            <nav class="list-group list-group-flush my-2 my-md-3 px-2">
+                <a href="vendor-dashboard.html" class="list-group-item list-group-item-action active rounded mb-1">
+                    <i class="fa-solid fa-chart-pie"></i> <span>Dashboard</span>
+                </a>
+                <a href="vendor-add-listing.html" class="list-group-item list-group-item-action rounded mb-1">
+                    <i class="fa-solid fa-store"></i> <span>My Business Profile</span>
+                </a>
+                <a href="/vendor/vendor-leads.html" class="list-group-item list-group-item-action rounded mb-1">
+                    <i class="fa-solid fa-headset"></i> <span>Customer Leads</span>
+                </a>
+                <a href="/vendor/vendor-gallery.html" class="list-group-item list-group-item-action rounded mb-1">
+                    <i class="fa-solid fa-images"></i> <span>Photo Gallery</span>
+                </a>
+                <a href="/vendor/vendor-reviews.html" class="list-group-item list-group-item-action rounded mb-1">
+                    <i class="fa-solid fa-star"></i> <span>My Reviews</span>
+                </a>
+                <a href="/vendor/vendor-account-settings.html" class="list-group-item list-group-item-action rounded mb-1">
+                    <i class="fa-solid fa-gear"></i> <span>Account Settings</span>
+                </a>
+            </nav>
+        </aside>
+
+        <main id="page-content-wrapper" class="w-100">
+            
+            <header class="navbar navbar-expand-lg navbar-light bg-white py-2 py-md-3 px-3 px-md-4 shadow-sm sticky-top">
+                <div class="d-flex align-items-center">
+                    <i class="fa-solid fa-bars fs-5 fs-md-4 me-3 cursor-pointer text-dark" id="menu-toggle"></i>
+                    <h5 class="mb-0 fw-bold text-dark d-none d-md-block">Overview</h5>
+                </div>
+                
+                <div class="d-none d-lg-flex ms-4">
+                    <span class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 rounded-pill px-3 py-2">
+                        <i class="fa-solid fa-circle-check me-1"></i> Profile Active (Live)
+                    </span>
+                </div>
+
+                <div class="ms-auto d-flex align-items-center">
+                    <div class="dropdown">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center text-dark" href="#" role="button" data-bs-toggle="dropdown">
+                            <img src="https://ui-avatars.com/api/?name=Rahul+Sharma&background=25a25a&color=fff" class="rounded-circle me-2 shadow-sm" width="35">
+                            <span class="fw-medium small d-none d-md-block">Rahul Sharma</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end shadow border-0 mt-2">
+                            <li><a class="dropdown-item text-muted small" href="/vendor/vendor-account-settings.html"><i class="fa-solid fa-gear me-2"></i> Account Settings</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-danger fw-medium small" href="#"><i class="fa-solid fa-power-off me-2"></i> Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+            <div class="container-fluid p-3 p-md-4">
+                
+                <section class="mb-4">
+                    <div class="card border-0 shadow-sm rounded-4 text-white overflow-hidden" style="background: linear-gradient(135deg, #25a25a, #1b7a42);">
+                        <div class="card-body p-4 p-md-5 position-relative">
+                            <div style="position: relative; z-index: 2;">
+                                <h3 class="fw-bold mb-1">Welcome back, Rahul! 👋</h3>
+                                <p class="mb-4 opacity-75">Here's how your business "Royal Balloon Events" is performing today.</p>
+                                <a href="/vendor/vendor-profile-preview.html" class="btn btn-light text-dark fw-bold rounded-pill px-4" style="font-size: 0.85rem;">
+                                    <i class="fa-solid fa-eye me-1 text-success"></i> View My Public Profile
+                                </a>
+                            </div>
+                            <i class="fa-solid fa-chart-line position-absolute opacity-25" style="font-size: 150px; right: -20px; bottom: -30px;"></i>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-4">
+                    <div class="row g-3 g-md-4">
+                        <div class="col-6 col-xl-3 col-md-6">
+                            <div class="card border-0 shadow-sm p-3 p-md-4 h-100 rounded-3">
+                                <div class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center gap-2">
+                                    <div>
+                                        <p class="text-muted mb-1 small fw-bold text-uppercase" style="font-size: 0.7rem;">Profile Views</p>
+                                        <h3 class="fw-bold mb-0 text-dark">458</h3>
+                                    </div>
+                                    <div class="bg-primary bg-opacity-10 text-primary rounded p-2 p-md-3">
+                                        <i class="fa-regular fa-eye fs-5 fs-md-4"></i>
+                                    </div>
+                                </div>
+                                <div class="mt-3 text-success small fw-medium" style="font-size: 0.75rem;"><i class="fa-solid fa-arrow-trend-up me-1"></i> +12% this week</div>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-xl-3 col-md-6">
+                            <div class="card border-0 shadow-sm p-3 p-md-4 h-100 rounded-3">
+                                <div class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center gap-2">
+                                    <div>
+                                        <p class="text-muted mb-1 small fw-bold text-uppercase" style="font-size: 0.7rem;">Total Leads</p>
+                                        <h3 class="fw-bold mb-0 text-dark">64</h3>
+                                    </div>
+                                    <div class="bg-success bg-opacity-10 text-success rounded p-2 p-md-3">
+                                        <i class="fa-solid fa-headset fs-5 fs-md-4"></i>
+                                    </div>
+                                </div>
+                                <div class="mt-3 text-success small fw-medium" style="font-size: 0.75rem;"><i class="fa-solid fa-arrow-trend-up me-1"></i> 3 New Today</div>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-xl-3 col-md-6">
+                            <div class="card border-0 shadow-sm p-3 p-md-4 h-100 rounded-3">
+                                <div class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center gap-2">
+                                    <div>
+                                        <p class="text-muted mb-1 small fw-bold text-uppercase" style="font-size: 0.7rem;">Average Rating</p>
+                                        <h3 class="fw-bold mb-0 text-dark">4.8</h3>
+                                    </div>
+                                    <div class="bg-warning bg-opacity-10 text-warning rounded p-2 p-md-3">
+                                        <i class="fa-solid fa-star fs-5 fs-md-4"></i>
+                                    </div>
+                                </div>
+                                <div class="mt-3 text-muted small" style="font-size: 0.75rem;">Based on 24 reviews</div>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-xl-3 col-md-6">
+                            <div class="card border-0 shadow-sm p-3 p-md-4 h-100 rounded-3">
+                                <div class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center gap-2">
+                                    <div>
+                                        <p class="text-muted mb-1 small fw-bold text-uppercase" style="font-size: 0.7rem;">Shortlisted By</p>
+                                        <h3 class="fw-bold mb-0 text-dark">18</h3>
+                                    </div>
+                                    <div class="bg-danger bg-opacity-10 text-danger rounded p-2 p-md-3">
+                                        <i class="fa-regular fa-heart fs-5 fs-md-4"></i>
+                                    </div>
+                                </div>
+                                <div class="mt-3 text-muted small" style="font-size: 0.75rem;">Customers saved you</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="card border-0 shadow-sm rounded-3 h-100">
+                        <div class="card-header bg-white border-bottom pt-3 pb-2 px-3 px-md-4 d-flex justify-content-between align-items-center flex-wrap gap-2">
+                            <h6 class="fw-bold text-dark mb-0">Recent Enquiries (Leads)</h6>
+                            <a href="#" class="btn btn-sm btn-outline-secondary px-2 px-md-3" style="font-size: 0.8rem;">View All Leads</a>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <table class="table table-hover align-middle text-nowrap mb-0">
+                                    <thead class="bg-light text-muted small text-uppercase" style="font-size: 0.75rem;">
+                                        <tr>
+                                            <th class="ps-3 ps-md-4 py-2 py-md-3">Date</th>
+                                            <th class="py-2 py-md-3">Customer Name</th>
+                                            <th class="py-2 py-md-3">Phone</th>
+                                            <th class="py-2 py-md-3">Requirement</th>
+                                            <th class="text-end pe-3 pe-md-4 py-2 py-md-3">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="small">
+                                        <tr>
+                                            <td class="ps-3 ps-md-4 py-2 py-md-3">
+                                                <div class="fw-medium text-dark" style="font-size: 0.8rem;">Today</div>
+                                                <div class="text-muted" style="font-size: 0.75rem;">10:30 AM</div>
+                                            </td>
+                                            <td><span class="fw-bold text-dark" style="font-size: 0.85rem;">Priya Verma</span></td>
+                                            <td>
+                                                <a href="tel:+919876543210" class="text-decoration-none fw-medium text-primary" style="font-size: 0.8rem;"><i class="fa-solid fa-phone me-1"></i> +91 98765 43210</a>
+                                            </td>
+                                            <td>
+                                                <span class="text-dark fw-medium" style="font-size: 0.8rem;">Birthday Setup</span>
+                                            </td>
+                                            <td class="text-end pe-3 pe-md-4">
+                                                <a href="https://wa.me/919876543210" target="_blank" class="btn btn-sm text-white px-2 px-md-3 me-1" style="background-color: #25d366; font-size: 0.75rem;"><i class="fa-brands fa-whatsapp"></i> Chat</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ps-3 ps-md-4 py-2 py-md-3">
+                                                <div class="fw-medium text-dark" style="font-size: 0.8rem;">Yesterday</div>
+                                                <div class="text-muted" style="font-size: 0.75rem;">04:15 PM</div>
+                                            </td>
+                                            <td><span class="fw-bold text-dark" style="font-size: 0.85rem;">Amit Singh</span></td>
+                                            <td>
+                                                <a href="tel:+919123456789" class="text-decoration-none fw-medium text-primary" style="font-size: 0.8rem;"><i class="fa-solid fa-phone me-1"></i> +91 91234 56789</a>
+                                            </td>
+                                            <td>
+                                                <span class="text-dark fw-medium" style="font-size: 0.8rem;">Baby Shower</span>
+                                            </td>
+                                            <td class="text-end pe-3 pe-md-4">
+                                                <a href="https://wa.me/919123456789" target="_blank" class="btn btn-sm text-white px-2 px-md-3 me-1" style="background-color: #25d366; font-size: 0.75rem;"><i class="fa-brands fa-whatsapp"></i> Chat</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../admin/admin-script.js"></script>
+</body>
+</html>

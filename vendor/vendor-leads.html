@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Customer Leads | Vendor Panel</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../admin/admin-style.css" />
+</head>
+<body class="bg-light">
+
+    <div class="d-flex" id="wrapper">
+
+        <aside id="sidebar-wrapper" class="shadow-sm bg-white">
+            <div class="sidebar-heading text-center py-3 py-md-4 fs-5 fw-bold border-bottom">
+                <span style="color: #25a25a;">Vendor</span> Panel
+            </div>
+            <nav class="list-group list-group-flush my-2 my-md-3 px-2">
+                <a href="vendor-dashboard.html" class="list-group-item list-group-item-action rounded mb-1">
+                    <i class="fa-solid fa-chart-pie"></i> <span>Dashboard</span>
+                </a>
+                <a href="vendor-add-listing.html" class="list-group-item list-group-item-action rounded mb-1">
+                    <i class="fa-solid fa-store"></i> <span>My Business Profile</span>
+                </a>
+                <a href="/vendor/vendor-leads.html" class="list-group-item list-group-item-action active rounded mb-1">
+                    <i class="fa-solid fa-headset"></i> <span>Customer Leads</span>
+                </a>
+                <a href="/vendor/vendor-gallery.html" class="list-group-item list-group-item-action rounded mb-1">
+                    <i class="fa-solid fa-images"></i> <span>Photo Gallery</span>
+                </a>
+                <a href="/vendor/vendor-reviews.html" class="list-group-item list-group-item-action rounded mb-1">
+                    <i class="fa-solid fa-star"></i> <span>My Reviews</span>
+                </a>
+                <a href="/vendor/vendor-account-settings.html" class="list-group-item list-group-item-action rounded mb-1">
+                    <i class="fa-solid fa-gear"></i> <span>Account Settings</span>
+                </a>
+            </nav>
+        </aside>
+
+        <main id="page-content-wrapper" class="w-100">
+            
+            <header class="navbar navbar-expand-lg navbar-light bg-white py-2 py-md-3 px-3 px-md-4 shadow-sm sticky-top">
+                <div class="d-flex align-items-center">
+                    <i class="fa-solid fa-bars fs-5 fs-md-4 me-3 cursor-pointer text-dark" id="menu-toggle"></i>
+                    <h5 class="mb-0 fw-bold text-dark d-none d-md-block">My Leads</h5>
+                </div>
+                <div class="ms-auto d-flex align-items-center">
+                    <div class="dropdown">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center text-dark" href="#" role="button" data-bs-toggle="dropdown">
+                            <img src="https://ui-avatars.com/api/?name=Rahul+Sharma&background=25a25a&color=fff" class="rounded-circle me-2" width="32">
+                            <span class="fw-medium small d-none d-md-block">Rahul Sharma</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end shadow border-0 mt-2">
+                            <li><a class="dropdown-item text-danger fw-medium small" href="#"><i class="fa-solid fa-power-off me-2"></i> Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+            <div class="container-fluid p-3 p-md-4">
+                
+                <section class="mb-3 mb-md-4 d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3">
+                    <div>
+                        <h3 class="fw-bold text-dark mb-1">Customer Enquiries</h3>
+                        <p class="text-muted small mb-0">Manage and respond to customers who contacted your business.</p>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <span class="badge bg-danger bg-opacity-10 text-danger border border-danger border-opacity-25 px-3 py-2 rounded-pill shadow-sm">
+                            <i class="fa-solid fa-fire me-1"></i> 3 New Leads
+                        </span>
+                    </div>
+                </section>
+
+                <section class="card border-0 shadow-sm rounded-3 mb-4">
+                    <div class="card-body p-3 p-md-4">
+                        <div class="row g-2 g-md-3">
+                            <div class="col-12 col-md-5 col-lg-4">
+                                <div class="input-group">
+                                    <span class="input-group-text bg-light border-0 text-muted"><i class="fa-solid fa-magnifying-glass"></i></span>
+                                    <input type="text" class="form-control bg-light border-0 shadow-none py-2" placeholder="Search customer name or phone..." style="font-size: 0.85rem;">
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 col-lg-3">
+                                <select class="form-select bg-light border-0 shadow-none py-2 cursor-pointer" style="font-size: 0.85rem;">
+                                    <option selected value="">All Status</option>
+                                    <option value="new">New</option>
+                                    <option value="contacted">Contacted</option>
+                                    <option value="converted">Converted (Booked)</option>
+                                    <option value="lost">Lost / Not Interested</option>
+                                </select>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <input type="date" class="form-control bg-light border-0 shadow-none py-2 text-muted" style="font-size: 0.85rem;">
+                            </div>
+                            <div class="col-12 col-lg-2">
+                                <button class="btn btn-dark fw-medium w-100 py-2" style="font-size: 0.85rem;">Filter</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="card border-0 shadow-sm rounded-3">
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-hover align-middle mb-0">
+                                <thead class="bg-light text-muted small text-uppercase" style="font-size: 0.75rem;">
+                                    <tr>
+                                        <th class="ps-3 ps-md-4 py-2 py-md-3 text-nowrap">Date & Time</th>
+                                        <th class="py-2 py-md-3 text-nowrap">Customer Info</th>
+                                        <th class="py-2 py-md-3" style="min-width: 250px;">Requirement Details</th>
+                                        <th class="py-2 py-md-3 text-nowrap">Lead Status</th>
+                                        <th class="text-end pe-3 pe-md-4 py-2 py-md-3 text-nowrap">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="small">
+                                    
+                                    <tr style="background-color: rgba(37, 162, 90, 0.03);">
+                                        <td class="ps-3 ps-md-4 py-3 text-nowrap">
+                                            <div class="fw-bold text-dark" style="font-size: 0.85rem;">Today</div>
+                                            <div class="text-muted" style="font-size: 0.75rem;">10:30 AM</div>
+                                        </td>
+                                        <td class="py-3 text-nowrap">
+                                            <div class="fw-bold text-dark mb-1" style="font-size: 0.85rem;">Priya Verma</div>
+                                            <a href="tel:+919876543210" class="text-decoration-none fw-medium" style="color: #25a25a; font-size: 0.8rem;"><i class="fa-solid fa-phone me-1"></i> +91 98765 43210</a>
+                                        </td>
+                                        <td class="py-3">
+                                            <div class="d-flex flex-column">
+                                                <span class="badge bg-light text-dark border align-self-start mb-1" style="font-size: 0.7rem;"><i class="fa-solid fa-cake-candles text-muted me-1"></i> Birthday Setup</span>
+                                                <p class="text-muted mb-0 text-truncate" style="font-size: 0.8rem; max-width: 250px;" title="Need decoration for 1st birthday party at Gomti Nagar, budget approx 5k.">
+                                                    "Need decoration for 1st birthday party at Gomti Nagar, budget approx 5k."
+                                                </p>
+                                            </div>
+                                        </td>
+                                        <td class="py-3 text-nowrap">
+                                            <select class="form-select form-select-sm border border-danger text-danger bg-danger bg-opacity-10 fw-medium shadow-none py-1 cursor-pointer" style="font-size: 0.75rem; width: 130px;">
+                                                <option value="new" selected>New Lead</option>
+                                                <option value="contacted">Contacted</option>
+                                                <option value="converted">Converted</option>
+                                                <option value="lost">Lost</option>
+                                            </select>
+                                        </td>
+                                        <td class="text-end pe-3 pe-md-4 py-3 text-nowrap">
+                                            <a href="https://wa.me/919876543210" target="_blank" class="btn btn-sm text-white rounded-pill px-3 shadow-sm me-1" style="background-color: #25d366; font-size: 0.75rem;">
+                                                <i class="fa-brands fa-whatsapp me-1"></i> WhatsApp
+                                            </a>
+                                            <button class="btn btn-sm btn-light text-primary border rounded-circle shadow-none" title="Add Private Note" data-bs-toggle="modal" data-bs-target="#noteModal" style="width: 32px; height: 32px;">
+                                                <i class="fa-regular fa-note-sticky"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="ps-3 ps-md-4 py-3 text-nowrap">
+                                            <div class="fw-bold text-dark" style="font-size: 0.85rem;">28 Oct 2023</div>
+                                            <div class="text-muted" style="font-size: 0.75rem;">04:15 PM</div>
+                                        </td>
+                                        <td class="py-3 text-nowrap">
+                                            <div class="fw-bold text-dark mb-1" style="font-size: 0.85rem;">Amit Singh</div>
+                                            <a href="tel:+919123456789" class="text-decoration-none fw-medium" style="color: #25a25a; font-size: 0.8rem;"><i class="fa-solid fa-phone me-1"></i> +91 91234 56789</a>
+                                        </td>
+                                        <td class="py-3">
+                                            <div class="d-flex flex-column">
+                                                <span class="badge bg-light text-dark border align-self-start mb-1" style="font-size: 0.7rem;"><i class="fa-solid fa-baby text-muted me-1"></i> Baby Shower</span>
+                                                <p class="text-muted mb-0 text-truncate" style="font-size: 0.8rem; max-width: 250px;">
+                                                    "Looking for welcome baby decoration at home."
+                                                </p>
+                                                <span class="text-primary mt-1" style="font-size: 0.7rem;"><i class="fa-solid fa-note-sticky me-1"></i> Note: Asked to call back tomorrow evening.</span>
+                                            </div>
+                                        </td>
+                                        <td class="py-3 text-nowrap">
+                                            <select class="form-select form-select-sm border border-warning text-dark bg-warning bg-opacity-10 fw-medium shadow-none py-1 cursor-pointer" style="font-size: 0.75rem; width: 130px;">
+                                                <option value="new">New Lead</option>
+                                                <option value="contacted" selected>Contacted</option>
+                                                <option value="converted">Converted</option>
+                                                <option value="lost">Lost</option>
+                                            </select>
+                                        </td>
+                                        <td class="text-end pe-3 pe-md-4 py-3 text-nowrap">
+                                            <a href="https://wa.me/919123456789" target="_blank" class="btn btn-sm text-white rounded-pill px-3 shadow-sm me-1" style="background-color: #25d366; font-size: 0.75rem;">
+                                                <i class="fa-brands fa-whatsapp me-1"></i> WhatsApp
+                                            </a>
+                                            <button class="btn btn-sm btn-light text-primary border rounded-circle shadow-none" title="Edit Note" data-bs-toggle="modal" data-bs-target="#noteModal" style="width: 32px; height: 32px;">
+                                                <i class="fa-regular fa-note-sticky"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="ps-3 ps-md-4 py-3 text-nowrap">
+                                            <div class="fw-bold text-dark" style="font-size: 0.85rem;">25 Oct 2023</div>
+                                            <div class="text-muted" style="font-size: 0.75rem;">11:00 AM</div>
+                                        </td>
+                                        <td class="py-3 text-nowrap">
+                                            <div class="fw-bold text-dark mb-1" style="font-size: 0.85rem;">Neha Gupta</div>
+                                            <a href="tel:+919988776655" class="text-decoration-none fw-medium" style="color: #25a25a; font-size: 0.8rem;"><i class="fa-solid fa-phone me-1"></i> +91 99887 76655</a>
+                                        </td>
+                                        <td class="py-3">
+                                            <div class="d-flex flex-column">
+                                                <span class="badge bg-light text-dark border align-self-start mb-1" style="font-size: 0.7rem;"><i class="fa-solid fa-heart text-muted me-1"></i> Anniversary Setup</span>
+                                                <p class="text-muted mb-0 text-truncate" style="font-size: 0.8rem; max-width: 250px;">
+                                                    "Room decoration for anniversary, romantic theme."
+                                                </p>
+                                            </div>
+                                        </td>
+                                        <td class="py-3 text-nowrap">
+                                            <select class="form-select form-select-sm border border-success text-success bg-success bg-opacity-10 fw-medium shadow-none py-1 cursor-pointer" style="font-size: 0.75rem; width: 130px;">
+                                                <option value="new">New Lead</option>
+                                                <option value="contacted">Contacted</option>
+                                                <option value="converted" selected>Converted</option>
+                                                <option value="lost">Lost</option>
+                                            </select>
+                                        </td>
+                                        <td class="text-end pe-3 pe-md-4 py-3 text-nowrap">
+                                            <button class="btn btn-sm btn-light border text-muted px-3 rounded-pill disabled" style="font-size: 0.75rem;"><i class="fa-solid fa-check me-1"></i> Booked</button>
+                                        </td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="card-footer bg-white border-top p-3 p-md-4 d-flex justify-content-between align-items-center flex-wrap gap-2 rounded-bottom-4">
+                            <span class="text-muted" style="font-size: 0.8rem;">Showing 1 to 10 of 64 Leads</span>
+                            <nav>
+                                <ul class="pagination pagination-sm mb-0">
+                                    <li class="page-item disabled"><a class="page-link text-muted border-0 bg-light rounded-start-pill px-2 px-md-3" href="#">Prev</a></li>
+                                    <li class="page-item active"><a class="page-link border-0 shadow-sm rounded-circle mx-1" style="background-color: #25a25a; color: white;" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link text-dark border-0 rounded-circle mx-1" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link text-dark border-0 bg-light rounded-end-pill px-2 px-md-3" href="#">Next</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <div class="modal fade" id="noteModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header border-bottom-0 pb-0">
+                    <h6 class="fw-bold mb-0">Add Private Note</h6>
+                    <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="small text-muted mb-3">Add a reminder or note about this lead. Only you can see this.</p>
+                    <form>
+                        <div class="mb-3">
+                            <textarea class="form-control bg-light border-0 shadow-none p-3" rows="4" placeholder="e.g. Asked to call back tomorrow evening, quoted 4500 INR..."></textarea>
+                        </div>
+                        <div class="text-end">
+                            <button type="button" class="btn btn-light rounded-pill px-4 me-2 shadow-none" data-bs-dismiss="modal" style="font-size: 0.85rem;">Cancel</button>
+                            <button type="submit" class="btn text-white rounded-pill px-4 shadow-sm" style="background-color: #25a25a; font-size: 0.85rem;">Save Note</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../admin/admin-script.js"></script>
+</body>
+</html>
